@@ -12,7 +12,8 @@ You'll need to create a repository and configure your IPython notebook directory
 
 1. Create a [new Github repository](https://help.github.com/articles/create-a-repo/)
 2. Configure github if you haven't done so
-```shell
+
+```Shell
 git config --global user.name "Ray Bohac"
 
 git config --global user.email "me@gmail.com"
@@ -32,11 +33,13 @@ git commit -m "first commit"
 
 git remote add origin git@github.com:<USERNAME>/<REPO-NAME>.git
 git push -u origin master
+
 ```
+
 3. Configure [Gitwatch](https://github.com/nevik/gitwatch)
 ..* I found [this guide helpful](https://github.com/nevik/gitwatch/wiki/gitwatch-as-a-service-on-Debian-with-supervisord)
 
-```
+```Shell
 apt-get install inotify-tools
 cd ~
 git clone https://github.com/nevik/gitwatch.git
