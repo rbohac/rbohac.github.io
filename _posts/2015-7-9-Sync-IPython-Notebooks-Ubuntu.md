@@ -2,8 +2,6 @@
 layout: post
 title: Automatically sync your IPython notebooks to Github
 ---
-#Automatically sync your IPython notebooks to Github
-
 I wanted to create an automatic backup with version control for my IPython notebooks. To do this I used
 
 [Github](https://github.com/)
