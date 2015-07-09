@@ -35,22 +35,23 @@ git push -u origin master
 ```
 3. Configure [Gitwatch](https://github.com/nevik/gitwatch)
 ..* I found [this guide helpful](https://github.com/nevik/gitwatch/wiki/gitwatch-as-a-service-on-Debian-with-supervisord)
+
 ```
 apt-get install inotify-tools
-#cd ~
-#git clone https://github.com/nevik/gitwatch.git
-#sudo cp gitwatch/gitwatch.sh /usr/local/sbin/gitwatch
-#sudo chmod +x /usr/local/sbin/gitwatch
+cd ~
+git clone https://github.com/nevik/gitwatch.git
+sudo cp gitwatch/gitwatch.sh /usr/local/sbin/gitwatch
+sudo chmod +x /usr/local/sbin/gitwatch
 vi /usr/local/sbin/gitwatch 
 (and set REMOTE="origin")
 ```
 4.Create Startup Script
-```shell
-#sudo vi /etc/init/gitwatch.conf"
-# gitwatch - push notebook updates to github
-#
-# gitwatch Notebook Server
-# Ray Bohac
+```
+sudo vi /etc/init/gitwatch.conf"
+#gitwatch - push notebook updates to github
+
+#gitwatch Notebook Server
+#Ray Bohac
 
 description     "gitwatch"
 
