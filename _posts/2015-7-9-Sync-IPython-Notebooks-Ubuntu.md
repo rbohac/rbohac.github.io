@@ -46,7 +46,8 @@ vi /usr/local/sbin/gitwatch
 (and set REMOTE="origin")
 ```
 4.Create Startup Script
-```
+
+```Shell
 sudo vi /etc/init/gitwatch.conf"
 #gitwatch - push notebook updates to github
 
