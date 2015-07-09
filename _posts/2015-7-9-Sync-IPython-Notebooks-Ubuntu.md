@@ -24,10 +24,10 @@ ssh-keygen -t rsa -b 4096 -C "rbohac@gmail.com"
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa
 
-cd ~/&lt;MYNOTEBOOKDIR&gt;
+cd ~/<MYNOTEBOOKDIR>;
 git add .
 git commit -m "first commit"
-git remote add origin git@github.com:&lt;USERNAME&gt;/&lt;REPO-NAME&gt;.git
+git remote add origin git@github.com:<USERNAME>/<REPO-NAME>.git
 git push -u origin master
 
 ```
@@ -67,7 +67,7 @@ pre-start script
     [ -d /var/run/gitwatch   ] || mkdir -p /var/run/gitwatch
 end script
 
-exec sudo -u ubuntu 2&gt;&gt;/dev/.initramfs/gitwatch.log /usr/local/sbin/gitwatch &lt;MYNOTEBOOKDIR&gt;
+exec sudo -u ubuntu 2>>/dev/.initramfs/gitwatch.log /usr/local/sbin/gitwatch <MYNOTEBOOKDIR>
 ```
 
 ##Start the service
