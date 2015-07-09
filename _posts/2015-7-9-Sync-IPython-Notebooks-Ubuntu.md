@@ -2,6 +2,7 @@
 layout: post
 title: Automatically sync your IPython notebooks to Github
 ---
+
 I wanted to create an automatic backup with version control for my IPython notebooks. To do this I used [Gitwatch](https://github.com/nevik/gitwatch)
 
 ###Useful Guides
@@ -16,24 +17,24 @@ I wanted to create an automatic backup with version control for my IPython noteb
 ## Setup Github
 You'll need to create a repository and configure your IPython notebook directory as a repository
 
-```Shell
+```
 git config --global user.name "Ray Bohac"
 git config --global user.email "me@gmail.com"
 ssh-keygen -t rsa -b 4096 -C "rbohac@gmail.com"
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa
 
-cd ~/<MYNOTEBOOKDIR>
+cd ~/&lt;MYNOTEBOOKDIR&gt;
 git add .
 git commit -m "first commit"
-git remote add origin git@github.com:<USERNAME>/<REPO-NAME>.git
+git remote add origin git@github.com:&lt;USERNAME&gt;/&lt;REPO-NAME&gt;.git
 git push -u origin master
 
 ```
 
 ##Configure [gitwatch](https://github.com/nevik/gitwatch)
 
-```Shell
+```
 apt-get install inotify-tools
 cd ~
 git clone https://github.com/nevik/gitwatch.git
@@ -45,11 +46,11 @@ set REMOTE="origin" in /usr/local/sbin/gitwatch
 
 ##Create Startup Script
 
-```Shell
+```
 sudo vi /etc/init/gitwatch.conf"
 ```
 
-```Shell
+```
 
 #gitwatch - push notebook updates to github
 #gitwatch Notebook Server
@@ -66,11 +67,11 @@ pre-start script
     [ -d /var/run/gitwatch   ] || mkdir -p /var/run/gitwatch
 end script
 
-exec sudo -u ubuntu 2>>/dev/.initramfs/gitwatch.log /usr/local/sbin/gitwatch <MYNOTEBOOKDIR>
+exec sudo -u ubuntu 2&gt;&gt;/dev/.initramfs/gitwatch.log /usr/local/sbin/gitwatch &lt;MYNOTEBOOKDIR&gt;
 ```
 
 ##Start the service
 
-```Shell
+```
 sudo start ipython
 ```
