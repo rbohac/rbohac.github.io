@@ -41,8 +41,7 @@ sudo cp gitwatch/gitwatch.sh /usr/local/sbin/gitwatch
 sudo chmod +x /usr/local/sbin/gitwatch
 vi /usr/local/sbin/gitwatch 
 ```
-
-####set REMOTE="origin" in /usr/local/sbin/gitwatch 
+set REMOTE="origin" in /usr/local/sbin/gitwatch 
 
 ##Create Startup Script
 
