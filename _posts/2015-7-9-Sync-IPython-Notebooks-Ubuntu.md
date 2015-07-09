@@ -12,24 +12,30 @@ You'll need to create a repository and configure your IPython notebook directory
 
 1. Create a [new Github repository](https://help.github.com/articles/create-a-repo/)
 2. Configure github if you haven't done so
-...
+```shell
 git config --global user.name "Ray Bohac"
+
 git config --global user.email "me@gmail.com"
 
 // Generate Keys https://help.github.com/articles/generating-ssh-keys/#platform-linux
+
 ssh-keygen -t rsa -b 4096 -C "rbohac@gmail.com"
+
 eval "$(ssh-agent -s)"
+
 ssh-add ~/.ssh/id_rsa
 
 cd ~/<MYNOTEBOOKDIR>
 git add .
+
 git commit -m "first commit"
+
 git remote add origin git@github.com:<USERNAME>/<REPO-NAME>.git
 git push -u origin master
-...
+```
 3. Configure [Gitwatch](https://github.com/nevik/gitwatch)
 ..* I found [this guide helpful](https://github.com/nevik/gitwatch/wiki/gitwatch-as-a-service-on-Debian-with-supervisord)
-...
+```
 apt-get install inotify-tools
 #cd ~
 #git clone https://github.com/nevik/gitwatch.git
@@ -37,9 +43,9 @@ apt-get install inotify-tools
 #sudo chmod +x /usr/local/sbin/gitwatch
 vi /usr/local/sbin/gitwatch 
 (and set REMOTE="origin")
-...
+```
 4.Create Startup Script
-...
+```shell
 #sudo vi /etc/init/gitwatch.conf"
 # gitwatch - push notebook updates to github
 #
@@ -58,4 +64,4 @@ pre-start script
 end script
 
 exec sudo -u ubuntu 2>>/dev/.initramfs/gitwatch.log /usr/local/sbin/gitwatch <MYNOTEBOOKDIR>
-...
+```
