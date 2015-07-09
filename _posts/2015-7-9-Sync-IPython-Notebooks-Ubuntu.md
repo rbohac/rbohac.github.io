@@ -20,7 +20,7 @@ You'll need to create a repository and configure your IPython notebook directory
 ```
 git config --global user.name "Ray Bohac"
 git config --global user.email "me@gmail.com"
-ssh-keygen -t rsa -b 4096 -C "rbohac@gmail.com"
+ssh-keygen -t rsa -b 4096 -C "me@gmail.com"
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa
 
