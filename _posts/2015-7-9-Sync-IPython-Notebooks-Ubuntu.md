@@ -11,7 +11,7 @@ I wanted to create an automatic backup with version control for my IPython noteb
 
 -[Generating SSH Keys](https://help.github.com/articles/generating-ssh-keys/#platform-linux)
 
--[Creating a Github repository](https://help.github.com/articles/create-a-repo/)]
+-[Creating a Github repository](https://help.github.com/articles/create-a-repo/)
 
 ## Setup Github
 You'll need to create a repository and configure your IPython notebook directory as a repository
