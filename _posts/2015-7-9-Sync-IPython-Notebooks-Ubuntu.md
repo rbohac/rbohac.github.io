@@ -31,7 +31,7 @@ git push -u origin master
 
 ```
 
-##Configure [Gitwatch](https://github.com/nevik/gitwatch)
+##Configure [gitwatch](https://github.com/nevik/gitwatch)
 
 ```Shell
 apt-get install inotify-tools
@@ -40,8 +40,10 @@ git clone https://github.com/nevik/gitwatch.git
 sudo cp gitwatch/gitwatch.sh /usr/local/sbin/gitwatch
 sudo chmod +x /usr/local/sbin/gitwatch
 vi /usr/local/sbin/gitwatch 
-(and set REMOTE="origin")
 ```
+
+####set REMOTE="origin" in /usr/local/sbin/gitwatch 
+
 ##Create Startup Script
 
 ```Shell
@@ -66,4 +68,10 @@ pre-start script
 end script
 
 exec sudo -u ubuntu 2>>/dev/.initramfs/gitwatch.log /usr/local/sbin/gitwatch <MYNOTEBOOKDIR>
+```
+
+##Start the service
+
+```Shell
+sudo start ipython
 ```
