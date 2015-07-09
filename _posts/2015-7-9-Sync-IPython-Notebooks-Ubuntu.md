@@ -5,10 +5,10 @@ title: Automatically sync your IPython notebooks to Github
 I wanted to create an automatic backup with version control for my IPython notebooks. To do this I used [Gitwatch](https://github.com/nevik/gitwatch)
 
 ###Useful Guides
-[Create a Repo](https://help.github.com/articles/create-a-repo/)
-[gitwatch as a service on Debian with supervisord](https://github.com/nevik/gitwatch/wiki/gitwatch-as-a-service-on-Debian-with-supervisord)
-[Generating SSH Keys](https://help.github.com/articles/generating-ssh-keys/#platform-linux)
-[Creating a Github repository](https://help.github.com/articles/create-a-repo/)]
+-[Create a Repo](https://help.github.com/articles/create-a-repo/)
+-[gitwatch as a service on Debian with supervisord](https://github.com/nevik/gitwatch/wiki/gitwatch-as-a-service-on-Debian-with-supervisord)
+-[Generating SSH Keys](https://help.github.com/articles/generating-ssh-keys/#platform-linux)
+-[Creating a Github repository](https://help.github.com/articles/create-a-repo/)]
 
 ## Setup Github
 You'll need to create a repository and configure your IPython notebook directory as a repository
